@@ -12,13 +12,13 @@ const GlobalStyled = createGlobalStyle`
   }
 `;
 
-function App() {
+const App = () => {
   return (
     <>
       <GlobalStyled />
       <Main />;
     </>
   );
-}
+};
 
 export default App;
