@@ -1,22 +1,23 @@
-import styled from "styled-components";
+import Main from "./Pages/Main";
+import { createGlobalStyle } from "styled-components";
 
-const Body = styled.div`
-  margin: 0;
-  padding: 0;
-`;
-const Text = styled.div`
-  font-size: 50px;
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  margin: 300px 0;
+const GlobalStyled = createGlobalStyle`
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+  * {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+  }
 `;
 
 function App() {
   return (
-    <Body>
-      <Text>Iniciando Projeto</Text>
-    </Body>
+    <>
+      <GlobalStyled />
+      <Main />;
+    </>
   );
 }
 
