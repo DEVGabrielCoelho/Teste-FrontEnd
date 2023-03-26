@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const ContentFooter = styled.div`
+  position: relative;
   width: 100%;
   height: 120px;
   background-color: #eb5e28;

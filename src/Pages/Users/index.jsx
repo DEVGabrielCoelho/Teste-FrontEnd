@@ -1,20 +1,18 @@
 import Container from "../../Components/Container";
 import Footer from "../../Components/Footer";
 import Header from "../../Components/Header";
-import Menu from "../../Components/Menu";
-import PostRender from "../../Components/PostRender";
+import UserRender from "../../Components/UserRender";
 
-const Main = () => {
+const Users = () => {
   return (
     <div>
       <Header />
-      <Container title="Main" description="Main">
-        <Menu />
-        <PostRender />
+      <Container title="Users" description="Users">
+        <UserRender />
       </Container>
       <Footer />
     </div>
   );
 };
 
-export default Main;
+export default Users;
