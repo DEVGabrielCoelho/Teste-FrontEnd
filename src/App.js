@@ -17,12 +17,13 @@ const GlobalStyled = createGlobalStyle`
 
 const App = () => {
   return (
+    // Configuração de Rotas
     <>
       <GlobalStyled />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Main />} />
-          <Route path="/listusers" element={<Users />} />
+          <Route path="/users" element={<Users />} />
           <Route path="/users/:id" element={<PageUser />} />
         </Routes>
       </BrowserRouter>

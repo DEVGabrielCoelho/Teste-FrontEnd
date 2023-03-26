@@ -5,7 +5,7 @@ import { fetchUsers } from "../../Api";
 
 const UserRender = () => {
   const [users, setUsers] = useState([]);
-
+  // Busca Informações na Ape retornando um false para cada Usuário
   useEffect(() => {
     const listUsers = async () => {
       let json = await fetchUsers();
@@ -15,6 +15,7 @@ const UserRender = () => {
     listUsers();
   }, []);
 
+  // Cria um evento onde só altera o estado do Info no usuário clicado
   const eventInfo = (index) => {
     const newUsers = [...users];
     newUsers[index].info = !newUsers[index].info;
@@ -37,11 +38,14 @@ const UserRender = () => {
           <div>
             <Text>Email:</Text> {item.email}
           </div>
-          {item.info ? (
-            <FaChevronUp size="15" onClick={() => eventInfo(index)} />
-          ) : (
-            <FaChevronDown size="15" onClick={() => eventInfo(index)} />
-          )}
+          {
+            //Renderização condicional do ícone de seta para cima ou para baixo, dependendo do valor da propriedade "info"
+            item.info ? (
+              <FaChevronUp size="15" onClick={() => eventInfo(index)} />
+            ) : (
+              <FaChevronDown size="15" onClick={() => eventInfo(index)} />
+            )
+          }
           {item.info && (
             <div>
               <hr />

@@ -9,9 +9,10 @@ import { Text } from "./styled";
 
 const PageUser = () => {
   const { id } = useParams();
-
   const [info, setInfo] = useState(null);
 
+  //Usando o Id como parametro para buscar e renderizar as Informações do Usuário
+  //O parametro ID vem direto da Api como rota e usando no useParams para identificação do router
   useEffect(() => {
     const listUsers = async () => {
       const json = await fetchUsersId(id);
