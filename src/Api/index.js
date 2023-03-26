@@ -1,12 +1,10 @@
-export default {
-  getListUsers: async () => {
-    const response = await fetch("https://jsonplaceholder.typicode.com/users");
-    const json = await response.json();
-    return json;
-  },
-  getListUsers: async () => {
-    const response = await fetch("https://jsonplaceholder.typicode.com/users");
-    const json = await response.json();
-    return json;
-  },
-};
+/*
+● Listagem de posts:
+  https://jsonplaceholder.typicode.com/posts
+● Listagem de comentários de um post:
+  https://jsonplaceholder.typicode.com/posts/[ID]/comments
+● Listagem de usuários:
+  https://jsonplaceholder.typicode.com/users
+● Detalhes de um usuário:
+  https://jsonplaceholder.typicode.com/users/[ID]
+*/
