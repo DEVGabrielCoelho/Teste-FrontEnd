@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { ContentUser } from "./styled";
+import { ContentUser, Text } from "./styled";
 
 const UserRender = () => {
   const [users, setUsers] = useState([]);
@@ -18,27 +18,41 @@ const UserRender = () => {
     <div>
       {users.map((item) => (
         <ContentUser key={item.id}>
-          <div> ID: {item.id}</div>
-          <div> Nome: {item.name}</div>
-          <div> User Name: {item.username}</div>
-          <div> Email: {item.email}</div>
-          {/* <div>
+          <div>
             {" "}
-            Endereço{" "}
-            <div key={1}>
-              <div>Rua: {item.address.street}</div>
-              <div>Suite: {item.address.suite}</div>
-              <div>Cidade: {item.address.city}</div>
-              <div>CEP: {item.address.zipcode}</div>
-              <div>
-                Geografico:{" "}
-                <div>
-                  <div>Lat: {item.address.geo.lat}</div>
-                  <div>Lnt: {item.address.geo.lng}</div>
-                </div>
-              </div>
-            </div>
-          </div> */}
+            <Text>ID:</Text> {item.id}
+          </div>
+          <div>
+            {" "}
+            <Text>Nome:</Text> {item.name}
+          </div>
+          <div>
+            {" "}
+            <Text>User Name:</Text> {item.username}
+          </div>
+          <div>
+            {" "}
+            <Text>Email:</Text> {item.email}
+          </div>
+          {
+            // <div>
+            //   {" "}
+            //   Endereço{" "}
+            //   <div key={1}>
+            //     <div>Rua: {item.address.street}</div>
+            //     <div>Suite: {item.address.suite}</div>
+            //     <div>Cidade: {item.address.city}</div>
+            //     <div>CEP: {item.address.zipcode}</div>
+            //     <div>
+            //       Geografico:{" "}
+            //       <div>
+            //         <div>Lat: {item.address.geo.lat}</div>
+            //         <div>Lnt: {item.address.geo.lng}</div>
+            //       </div>
+            //     </div>
+            //   </div>
+            // </div>
+          }
         </ContentUser>
       ))}
     </div>
@@ -46,17 +60,3 @@ const UserRender = () => {
 };
 
 export default UserRender;
-
-// "id": 1,
-//     "name": "Leanne Graham",
-//     "username": "Bret",
-//     "email": "Sincere@april.biz",
-//     "address": {
-//       "street": "Kulas Light",
-//       "suite": "Apt. 556",
-//       "city": "Gwenborough",
-//       "zipcode": "92998-3874",
-//       "geo": {
-//         "lat": "-37.3159",
-//         "lng": "81.1496"
-//       }

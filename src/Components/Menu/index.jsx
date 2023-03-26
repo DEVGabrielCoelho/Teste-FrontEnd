@@ -8,7 +8,7 @@ const Menu = () => {
         <Link to="/">
           <ButtonMenu>Inicio</ButtonMenu>
         </Link>
-        <Link to="/users">
+        <Link to="/listusers">
           <ButtonMenu>Usuários Cadastrados</ButtonMenu>
         </Link>
       </ContainerMenu>
