@@ -23,7 +23,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/listusers" element={<Users />} />
-          <Route path="/users/id" element={<PageUser />} />
+          <Route path="/users/:id" element={<PageUser />} />
         </Routes>
       </BrowserRouter>
       ;

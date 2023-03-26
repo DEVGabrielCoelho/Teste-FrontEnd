@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { fetchPosts, fetchUsers } from "../../Api";
 import { ContentPost, RouterLink, Text } from "./styled";
 
 const PostRender = () => {
@@ -7,21 +8,17 @@ const PostRender = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    fetchPosts();
-    fetchUsers();
+    const listPosts = async () => {
+      const json = await fetchPosts();
+      setPosts(json);
+    };
+    const listUsers = async () => {
+      const json = await fetchUsers();
+      setUsers(json);
+    };
+    listPosts();
+    listUsers();
   }, []);
-
-  const fetchPosts = async () => {
-    const response = await fetch("https://jsonplaceholder.typicode.com/posts");
-    const json = await response.json();
-    setPosts(json);
-  };
-
-  const fetchUsers = async () => {
-    const response = await fetch("https://jsonplaceholder.typicode.com/users");
-    const json = await response.json();
-    setUsers(json);
-  };
 
   const getUserName = (userId) => {
     const user = users.find((user) => user.id === userId);
@@ -42,11 +39,11 @@ const PostRender = () => {
           </div>
           <div>
             {" "}
-            <Text>Titulo:</Text> {post.title}
+            <Text>Título:</Text> {post.title}
           </div>
           <div>
             {" "}
-            <Text>Comentário:</Text>
+            <Text>Conteúdo:</Text>
             {post.body}
           </div>
         </ContentPost>
