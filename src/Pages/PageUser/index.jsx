@@ -29,6 +29,7 @@ const PageUser = () => {
         <Menu />
         {info && (
           <div>
+            <hr />
             <div>
               <Text>Nome:</Text> {info.name}
             </div>
@@ -66,6 +67,7 @@ const PageUser = () => {
                 </div>
               </div>
             </div>
+            <hr />
           </div>
         )}
       </Container>

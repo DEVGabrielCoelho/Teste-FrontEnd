@@ -11,4 +11,8 @@ export const ContentTitle = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 700px) {
+    font-size: 40px;
+  }
 `;

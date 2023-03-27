@@ -8,6 +8,9 @@ export const ButtonMenu = styled.button`
   color: black;
   font-size: 18px;
   font-weight: 800;
+  @media screen and (max-width: 700px) {
+    font-size: 16px;
+  }
 `;
 
 export const ContainerMenu = styled.div`
@@ -15,4 +18,10 @@ export const ContainerMenu = styled.div`
   justify-content: center;
   gap: 20px;
   margin-bottom: 20px;
+  @media screen and (max-width: 700px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;

@@ -27,7 +27,6 @@ const App = () => {
           <Route path="/users/:id" element={<PageUser />} />
         </Routes>
       </BrowserRouter>
-      ;
     </>
   );
 };
