@@ -1,13 +1,27 @@
-## Available Scripts
+#Projeto Blog
 
-In the project directory, you can run:
+Projeto em React em JavScript referente ao tema proposto do teste pratico.
 
-### `npm start`
+### Clonando Projeto
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Clonando pelo GitBash
+$ git clone https://github.com/GCPernalonga/Teste-FrontEnd.git
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Clonando pelo GitDesktop
 
-###
+- Abra o GitDesktop
+- Abra o File
+- Click em Clone Repository (Ctrl+Shift+O)
+- Vá para aba URL
+- Cole o seguinte URL no campo "Repository URL or GitHub ..."
+  https://github.com/GCPernalonga/Teste-FrontEnd.git
+- Escolha o local onde deseja clonar em Local path
+- Click em Clone
+
+
+### Instalação
+# Ao Abrir o projeto no VS Code digite o comando no terminal de sua escolha para instalar o projeto
+- `npm install`
+
+### Para rodar
+- `npm start` 
