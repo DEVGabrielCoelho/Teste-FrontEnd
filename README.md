@@ -19,8 +19,9 @@ Projeto em React em JavScript referente ao tema proposto do teste pratico.
 
 
 ## Instalação
-#### Ao Abrir o projeto no VS Code digite o comando no terminal de sua escolha para instalar o projeto
+#### Ao Abrir o projeto no VS Code digite o comando no terminal de sua escolha para instalar o projeto.
 - `npm install`
 
 ## Para rodar
+#### Para rodar o projeto digite o comando no terminal de sua escolha.
 - `npm start` 
