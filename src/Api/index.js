@@ -22,7 +22,7 @@ export async function fetchPosts() {
 }
 
 // Api de seleção de comentários por ID em cada posts
-export async function fetchComments(id) {
+export async function fetchCommentsId(id) {
   const response = await fetch(
     `https://jsonplaceholder.typicode.com/posts/${id}/comments`
   );

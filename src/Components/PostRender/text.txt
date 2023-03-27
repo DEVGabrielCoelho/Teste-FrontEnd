@@ -7,6 +7,9 @@ import { ContentPost, RouterLink, Text } from "./styled";
 const PostRender = () => {
   const [posts, setPosts] = useState([]);
   const [users, setUsers] = useState([]);
+  const [comments, setComments] = useState([]);
+  const [postId, setPostId] = useState(null);
+
   //Recebe informações da Api como JSON
   useEffect(() => {
     const listPosts = async () => {
@@ -26,29 +29,12 @@ const PostRender = () => {
     const user = users.find((user) => user.id === userId);
     return user ? user.name : "Unknown user";
   };
-  const handleClick = async (postId) => {
-    setPosts((prevPosts) =>
-      prevPosts.map((post) => {
-        if (post.id === postId) {
-          return {
-            ...post,
-            showComments: !post.showComments,
-            comments: post.showComments ? [] : comments[postId],
-          };
-        }
-        return post;
-      })
-    );
-    if (!comments[postId]) {
-      const json = await fetchCommentsId(postId);
-      setComments((prevComments) => ({
-        ...prevComments,
-        [postId]: json,
-      }));
-    }
-  };
 
-  const [comments, setComments] = useState({});
+  const handleClick = async (id) => {
+    const json = await fetchCommentsId(id);
+    setComments(json);
+    setPostId(id);
+  };
 
   return (
     // o RouterLink está fazendo um redirecionamento para uma pagina contendo as informações do Usuário
@@ -68,25 +54,16 @@ const PostRender = () => {
             <Text>Conteúdo:</Text>
             {post.body}
           </div>
-          <Button onClick={() => handleClick(post.id)}>
-            {post.showComments ? "Ocultar comentários" : "Mostrar Comentários"}
-          </Button>
-          {post.showComments &&
-            comments[post.id] &&
-            comments[post.id].map((comment) => (
-              <div key={comment.id}>
-                <hr />
+          <Button onClick={() => handleClick(post.id)}>Comentários</Button>
+          {postId === post.id &&
+            comments.map((item) => (
+              <div key={item.id}>
                 <div>
-                  <Text>Id:</Text> {comment.id}
+                  <Text>Título:</Text> {item.name}
                 </div>
                 <div>
-                  <Text>Título:</Text> {comment.name}
-                </div>
-                <div>
-                  <Text>Email:</Text> {comment.email}
-                </div>
-                <div>
-                  <Text>Comentário:</Text> {comment.body}
+                  <Text>Conteúdo:</Text>
+                  {item.email}
                 </div>
               </div>
             ))}

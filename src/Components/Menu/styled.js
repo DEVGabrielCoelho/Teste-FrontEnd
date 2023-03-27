@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ButtonMenu = styled.button`
   padding: 10px;
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
   background-color: #eb5e28;
   color: black;
   font-size: 18px;

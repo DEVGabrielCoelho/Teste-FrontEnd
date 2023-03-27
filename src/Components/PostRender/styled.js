@@ -4,6 +4,7 @@ export const ContentPost = styled.div`
   display: grid;
   margin: 10px;
   padding: 10px;
+  background-color: #fffcf2;
   border: 1px solid #252422;
   border-radius: 5px;
   font-weight: 500;
