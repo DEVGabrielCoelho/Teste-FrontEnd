@@ -1,4 +1,4 @@
-#Projeto Blog
+# Projeto BlogPost
 
 Projeto em React em JavScript referente ao tema proposto do teste pratico.
 
