@@ -2,13 +2,12 @@
 
 Projeto em React em JavScript referente ao tema proposto do teste pratico.
 
-### Clonando Projeto
+## Clonando Projeto
 
-# Clonando pelo GitBash
-$ git clone https://github.com/GCPernalonga/Teste-FrontEnd.git
+#### Clonando pelo GitBash
+- $ git clone https://github.com/GCPernalonga/Teste-FrontEnd.git
 
-# Clonando pelo GitDesktop
-
+#### Clonando pelo GitDesktop
 - Abra o GitDesktop
 - Abra o File
 - Click em Clone Repository (Ctrl+Shift+O)
@@ -19,9 +18,9 @@ $ git clone https://github.com/GCPernalonga/Teste-FrontEnd.git
 - Click em Clone
 
 
-### Instalação
-# Ao Abrir o projeto no VS Code digite o comando no terminal de sua escolha para instalar o projeto
+## Instalação
+#### Ao Abrir o projeto no VS Code digite o comando no terminal de sua escolha para instalar o projeto
 - `npm install`
 
-### Para rodar
+## Para rodar
 - `npm start` 
